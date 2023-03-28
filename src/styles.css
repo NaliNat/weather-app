@@ -1,0 +1,86 @@
+h2.city-name {
+  padding-top: 40px;
+  color: #27296d;
+}
+
+button.search-btn {
+  background: #5e63b6;
+  color: white;
+  border: #5e63b6;
+  height: 50px;
+}
+
+input.city-input-box {
+  height: 50px;
+  border-color: #9092b4;
+}
+
+.container {
+  font-family: "Poppins", sans-serif;
+  font-family: "Raleway", sans-serif;
+}
+
+.more-info {
+  text-align: right;
+}
+
+.more-info-first {
+  font-weight: 400;
+  color: #7168a1;
+  font-style: italic;
+}
+
+.current-temp {
+  margin-left: 30px;
+  margin-top: 10px;
+  font-size: 50px;
+  line-height: 60px;
+}
+
+.box-weather {
+  box-shadow: 0 30px 30px rgba(65, 50, 100, 0.16);
+  margin: 60px auto;
+  max-width: 630px;
+  padding: 40px 70px 40px;
+  border-radius: 4px;
+}
+
+.forecast {
+  line-height: 50px;
+  padding-top: 50px;
+  text-align: center;
+  margin: 20px auto;
+}
+
+.day,
+.icon-weather {
+  color: #a05b81;
+}
+
+.temp {
+  color: #db409b;
+  font-weight: 500;
+}
+
+#celsius,
+#fahr {
+  color: rgb(46, 18, 112);
+}
+
+#current-btn {
+  background: #db409b;
+}
+
+h1 .sup-degree {
+  font-size: 45%;
+}
+
+h1 .temperature {
+  margin-left: 8px;
+}
+
+button.search-btn:hover {
+  background: #a393eb;
+  border: #a393eb;
+  color: white;
+}
