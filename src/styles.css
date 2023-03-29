@@ -70,6 +70,7 @@ div.container {
 .coded-by {
   color: rgba(0, 0, 0, 0.74);
   padding-bottom: 30px;
+  padding-left: 10px;
 }
 
 #celsius,
