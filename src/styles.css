@@ -15,9 +15,14 @@ input.city-input-box {
   border-color: #9092b4;
 }
 
-.container {
+div.container {
   font-family: "Poppins", sans-serif;
   font-family: "Raleway", sans-serif;
+  width: 100%;
+  max-width: 700px;
+  padding-right: 30px;
+  padding-left: 30px;
+  margin-right: auto;
 }
 
 .more-info {
@@ -39,7 +44,7 @@ input.city-input-box {
 
 .box-weather {
   box-shadow: 0 30px 30px rgba(65, 50, 100, 0.16);
-  margin: 60px auto;
+  margin: 60px auto 30px;
   max-width: 630px;
   padding: 40px 70px 40px;
   border-radius: 4px;
@@ -60,6 +65,11 @@ input.city-input-box {
 .temp {
   color: #db409b;
   font-weight: 500;
+}
+
+.coded-by {
+  color: rgba(0, 0, 0, 0.74);
+  padding-bottom: 30px;
 }
 
 #celsius,
