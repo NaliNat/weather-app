@@ -1,4 +1,4 @@
-button.search-btn {
+button#search-btn {
   background: #5e63b6;
   color: white;
   border: #5e63b6;
@@ -77,6 +77,14 @@ h1 .sup-degree {
   padding-left: 10px;
 }
 
+.max-temp {
+  font-weight: bold;
+}
+
+.min-temp {
+  opacity: 0.7;
+}
+
 #city-name {
   padding-top: 40px;
   color: #27296d;
@@ -93,10 +101,9 @@ h1 .sup-degree {
 
 #current-btn {
   background: #db409b;
-}
-
-#current-max-temp {
-  font-weight: bold;
+  height: 50px;
+  border: #db409b;
+  color: white;
 }
 
 #temperature {
@@ -108,6 +115,10 @@ h1 .sup-degree {
     brightness(92%) contrast(100%);
 }
 
+#min-temp {
+  opacity: 0.7;
+}
+
 .active#celsius,
 .active#fahr {
   color: black;
@@ -115,8 +126,13 @@ h1 .sup-degree {
   text-decoration: none;
 }
 
-button.search-btn:hover {
+button#search-btn:hover {
   background: #a393eb;
   border: #a393eb;
+  color: white;
+}
+
+button#current-btn:hover {
+  background: #e085ba;
   color: white;
 }
