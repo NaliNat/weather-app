@@ -14,19 +14,17 @@ function changeCity(event) {
   sentence = ``;
   let newCity = document.querySelector("#city-box");
   if (newCity.value) {
-    let oldCity = document.querySelector(".city-name");
+    let oldCity = document.querySelector("#city-name");
     oldCity.innerHTML = newCity.value;
     retrieveCityWeather(newCity.value);
     document.querySelector("#city-box").value = "";
   } else {
     getLiveData();
   }
-
-  updateDate();
 }
 
-function updateDate() {
-  let date = new Date();
+function updateDate(timestamp) {
+  let date = new Date(timestamp * 1000);
   let days = [
     "Sunday",
     "Monday",
@@ -37,6 +35,7 @@ function updateDate() {
     "Saturday",
   ];
   let day = date.getDay();
+
   let hour = date.getHours();
   if (hour < 10) {
     hour = `0${hour}`;
@@ -47,9 +46,7 @@ function updateDate() {
     minutes = `0${minutes}`;
   }
 
-  let currentDay = document.querySelector(".date-info");
-
-  currentDay.innerHTML = `${days[day]}, ${hour}:${minutes}`;
+  return `${days[day]}, ${hour}:${minutes}`;
 }
 
 function changeTemp(event) {
@@ -57,7 +54,7 @@ function changeTemp(event) {
   let temperature = document.querySelector("#temperature");
 
   if (event.target.id === "celsius" && tempFlag === false) {
-    retrieveCityWeather(document.querySelector(".city-name").innerHTML);
+    retrieveCityWeather(document.querySelector("#city-name").innerHTML);
     sentence = ``;
   } else {
     if (tempFlag === true && event.target.id === "fahr") {
@@ -67,7 +64,6 @@ function changeTemp(event) {
       tempFlag = false;
     }
   }
-  updateDate();
 }
 
 function createSentence(element) {
@@ -79,15 +75,13 @@ function createSentence(element) {
 }
 
 function showTemperature(response) {
-  console.log(response);
-
-  let city = document.querySelector(".city-name");
+  let city = document.querySelector("#city-name");
   city.innerHTML = response.data.name;
 
   let temperature = document.querySelector("#temperature");
   temperature.innerHTML = `${Math.round(response.data.main.temp)}`;
 
-  let weather = document.querySelector(".weather");
+  let weather = document.querySelector("#weather");
   response.data.weather.forEach(createSentence);
   weather.innerHTML = `${sentence}`;
 
@@ -96,6 +90,19 @@ function showTemperature(response) {
 
   let forecastMax = document.querySelector("#current-max-temp");
   forecastMax.innerHTML = `${Math.round(response.data.main.temp_max)}°`;
+
+  let windSpeed = document.querySelector("#windspeed");
+  windSpeed.innerHTML = Math.round(response.data.wind.speed);
+
+  let dateElement = document.querySelector("#date-info");
+  dateElement.innerHTML = updateDate(response.data.dt);
+
+  let iconElement = document.querySelector("#icon");
+  iconElement.setAttribute(
+    "src",
+    `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+  );
+  iconElement.setAttribute("alt", response.data.weather[0].description);
 }
 
 function retrieveCityWeather(city) {
@@ -105,7 +112,6 @@ function retrieveCityWeather(city) {
   axios.get(`${apiUrl}&appid=${apiKey}`).then(showTemperature);
 }
 
-updateDate();
 getLiveData();
 
 let tempFlag = false;

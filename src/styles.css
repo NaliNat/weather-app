@@ -1,8 +1,3 @@
-h2.city-name {
-  padding-top: 40px;
-  color: #27296d;
-}
-
 button.search-btn {
   background: #5e63b6;
   color: white;
@@ -73,6 +68,15 @@ div.container {
   padding-left: 10px;
 }
 
+#city-name {
+  padding-top: 40px;
+  color: #27296d;
+}
+
+#weather {
+  text-transform: capitalize;
+}
+
 #celsius,
 #fahr {
   color: rgb(46, 18, 112);
@@ -82,12 +86,17 @@ div.container {
   background: #db409b;
 }
 
-h1 .sup-degree {
-  font-size: 45%;
+#temperature {
+  margin-left: 8px;
 }
 
-h1 .temperature {
-  margin-left: 8px;
+#icon {
+  filter: invert(90%) sepia(29%) saturate(5628%) hue-rotate(202deg)
+    brightness(92%) contrast(100%);
+}
+
+h1 .sup-degree {
+  font-size: 45%;
 }
 
 button.search-btn:hover {

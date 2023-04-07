@@ -56,14 +56,24 @@
 
         <div class="row">
           <div class="col-6">
-            <h2 class="city-name">Córdoba</h2>
+            <h2 id="city-name">Córdoba</h2>
+            <span class="more-info-first">
+              Last update:
+              <span id="date-info"> Sunday, 7:00 </span>
+            </span>
           </div>
         </div>
 
         <div class="row">
-          <div class="col-6">
+          <div class="col-6 d-flex">
             <h1 class="current-temp">
-              <span class="temperature" id="temperature"> 23 </span>
+              <img
+                src="https://openweathermap.org/img/wn/10d@2x.png"
+                alt="Icon"
+                id="icon"
+              />
+              <br />
+              <span id="temperature"> 23 </span>
 
               <sup class="sup-degree"
                 ><a href="" id="celsius">°C</a> |
@@ -73,9 +83,12 @@
           </div>
           <div class="col-6 more-info">
             <h4 class="more-info-first">
-              <span class="date-info"> Sunday, 7:00 </span>
               <br />
-              <span class="weather"> Various clouds </span>
+              <span id="weather"> Various clouds </span>
+              <br />
+              Wind:
+              <span id="windspeed"> 2 </span>
+              Km/H
             </h4>
 
             <h3>
