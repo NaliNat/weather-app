@@ -185,4 +185,4 @@ fahr.addEventListener("click", changeTemp);
 let currentButton = document.querySelector("#current-btn");
 currentButton.addEventListener("submit", changeCity);
 
-getLiveData();
+retrieveCityWeather("Madrid");
