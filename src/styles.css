@@ -56,9 +56,14 @@ h1 .sup-degree {
   margin: 20px auto;
 }
 
-.day,
-.icon-weather {
+.day {
   color: #a05b81;
+}
+
+.icon-forecast {
+  width: 99%;
+  filter: invert(45%) sepia(37%) saturate(5092%) hue-rotate(299deg)
+    brightness(88%) contrast(94%);
 }
 
 .temp {
@@ -88,6 +93,10 @@ h1 .sup-degree {
 
 #current-btn {
   background: #db409b;
+}
+
+#current-max-temp {
+  font-weight: bold;
 }
 
 #temperature {
