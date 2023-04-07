@@ -56,12 +56,16 @@ function changeTemp(event) {
   if (event.target.id === "celsius" && tempFlag === false) {
     retrieveCityWeather(document.querySelector("#city-name").innerHTML);
     sentence = ``;
+    fahr.classList.remove("active");
+    celsius.classList.add("active");
   } else {
     if (tempFlag === true && event.target.id === "fahr") {
       temperature.innerHTML = `${Math.round(
         (temperature.innerHTML * 9) / 5 + 32
       )}`;
       tempFlag = false;
+      celsius.classList.remove("active");
+      fahr.classList.add("active");
     }
   }
 }

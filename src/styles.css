@@ -95,6 +95,13 @@ div.container {
     brightness(92%) contrast(100%);
 }
 
+.active#celsius,
+.active#fahr {
+  color: black;
+  cursor: default;
+  text-decoration: none;
+}
+
 h1 .sup-degree {
   font-size: 45%;
 }
