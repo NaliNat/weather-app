@@ -102,7 +102,7 @@ function showTemperature(response) {
     "src",
     `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
   );
-  iconElement.setAttribute("alt", response.data.weather[0].description);
+  iconElement.setAttribute("alt", response.data.weather[0].descriptionx);
 }
 
 function retrieveCityWeather(city) {
@@ -111,8 +111,6 @@ function retrieveCityWeather(city) {
 
   axios.get(`${apiUrl}&appid=${apiKey}`).then(showTemperature);
 }
-
-getLiveData();
 
 let tempFlag = false;
 let apiKey = "bfe034c79313e4c85038991db35fe483";
@@ -129,3 +127,5 @@ fahr.addEventListener("click", changeTemp);
 
 let currentButton = document.querySelector("#current-btn");
 currentButton.addEventListener("submit", changeCity);
+
+getLiveData();
