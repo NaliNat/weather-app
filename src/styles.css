@@ -20,6 +20,10 @@ div.container {
   margin-right: auto;
 }
 
+h1 .sup-degree {
+  font-size: 45%;
+}
+
 .more-info {
   text-align: right;
 }
@@ -100,10 +104,6 @@ div.container {
   color: black;
   cursor: default;
   text-decoration: none;
-}
-
-h1 .sup-degree {
-  font-size: 45%;
 }
 
 button.search-btn:hover {
